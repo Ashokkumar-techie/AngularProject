@@ -4,5 +4,5 @@ import { AppComponent } from './app/app.component';
 import { LayoutComponent } from './app/layout/layout.component';
 import { ReactiveformComponent } from './app/reactiveform/reactiveform.component';
 
-bootstrapApplication(ReactiveformComponent, appConfig)
+bootstrapApplication(LayoutComponent, appConfig)
   .catch((err) => console.error(err));

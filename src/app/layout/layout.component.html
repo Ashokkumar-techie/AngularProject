@@ -1,1 +1,16 @@
-<p>layout works!</p>
+<h1>Layout Component Works..!!!</h1>
+
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Contact</a>
+  </li>
+  
+</ul>
+
+<router-outlet></router-outlet>
