@@ -4,11 +4,15 @@
   <li class="nav-item">
     <a class="nav-link " aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
   </li>
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <a class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >About</a>
-  </li>
+  </li> -->
   <li class="nav-item">
-    <a class="nav-link" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Contact</a>
+    <a class="nav-link" [routerLink]="['/about',1,'Annie']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >About</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/contact',1,'Ravi']" [queryParams]="{page:1,name:'Siva'}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Contact</a>
   </li>
   
 </ul>

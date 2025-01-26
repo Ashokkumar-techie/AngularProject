@@ -1,6 +1,6 @@
 import { CommonModule, JsonPipe } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
@@ -9,7 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   templateUrl: './reactiveform.component.html',
   styleUrl: './reactiveform.component.css'
 })
-export class ReactiveformComponent {
+export class ReactiveformComponent  {
+
+  
 
   IndianStates = [
     {id:1,name:'Telangana'},

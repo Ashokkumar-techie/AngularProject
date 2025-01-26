@@ -1,1 +1,86 @@
 <p>home works!</p>
+
+<!-- if Statement -->
+
+<h6 *ngIf="statement">This is checking for If Statement</h6>
+<br>
+
+<!-- if-else Statement -->
+
+<div *ngIf="test ; else elseBlock">
+    Batman wake Up on Nights
+</div>
+<br>
+<ng-template #elseBlock>
+    Batman flyes on Air
+</ng-template>
+<br>
+
+<!-- if- executes then statement else executes else statement -->
+
+<div *ngIf="demo ; then ifBlock ; else elseBlocks">
+    Spiderman Walks on Road
+</div>
+<br>
+
+<ng-template #ifBlock>
+    Spiderman going to America
+</ng-template>
+<br>
+
+<ng-template #elseBlocks>
+    Spiderman going to India
+</ng-template>
+
+<!-- SwitchCase Statement -->
+<br> <br>
+
+
+<div [ngSwitch]="player">
+    
+<ul>
+    <li *ngSwitchCase="'Dhoni'">{{player}} is Captain</li>
+    <li *ngSwitchCase="'Virat'">{{player}} is Batter</li>
+    <li *ngSwitchCase="'Yuvi'">{{player}} is All-rounder</li>
+    <li *ngSwitchDefault="">{{player}} is Mi Captain</li>
+</ul>
+</div>
+<p>Example on For Loop</p>
+<h3 *ngFor="let c of carlist ; index as i">{{i}} : {{c}}</h3>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+    </tr>
+    <tr *ngFor="let s of sports">
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+    </tr>
+</table>
+<br>
+<p>Example on Switch Statement</p>
+
+
+<div [ngSwitch]="operations">
+    <ul>
+        <li *ngSwitchCase="'+'">{{num1+num2}}</li>
+        <li *ngSwitchCase="'-'">{{num1-num2}}</li>
+        <li *ngSwitchCase="'*'">{{num1*num2}}</li>
+        <li *ngSwitchCase="'/'">{{num1/num2}}</li>
+        <li *ngSwitchDefault="">No data</li>
+    </ul>
+</div>
+
+<!-- Behavioral Directives -->
+ <p>Behavioral Directives</p>
+ <div [ngStyle]="product">This is ng Style Behavioral Directives</div>
+ <!-- <div [ngClass]="theme"></div> -->
+
+<!-- Custom directives -->
+
+<p>To Implement Custom directives</p>
+
+<div appAppHighlightTextColor>Hey dont feel Bad Never Ever give Up..!!!</div>
+
+<h1 appRedHighlightTextColor> This is the Renderer Method </h1>
