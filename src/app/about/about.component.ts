@@ -1,15 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import {  ActivatedRoute, Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import {  ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { AppHighlightTextColorDirective } from '../app-highlight-text-color.directive';
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule],
+  imports: [CommonModule , RouterLink],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
 export class AboutComponent implements OnInit {
+
+  
+
+
+  
  user ={
   id:"",
   name:""
@@ -31,7 +36,12 @@ constructor(private router:ActivatedRoute) {
       id:data['id1'],
       name:data['name1']
     }
+
+    
    })
+
+
+   
 
    
 

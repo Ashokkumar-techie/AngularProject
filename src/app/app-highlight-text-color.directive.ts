@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appAppHighlightTextColor]'
@@ -9,7 +9,17 @@ export class AppHighlightTextColorDirective implements OnInit {
   ngOnInit(): void {
     (this.elements.nativeElement as HTMLElement).style.color="Blue";
 
-    this.renderer.setStyle(this.elements.nativeElement , 'color' ,  "red")
+   
+  }
+
+  @HostListener('mouseenter') onmouseenter (event:Event){
+    this.renderer.setStyle(this.elements.nativeElement , 'color' , 'red');
+    this.renderer.setStyle(this.elements.nativeElement, 'font-size' , '30px');
+  }
+
+  @HostListener('mouseleave') onmouseleave (event:Event){
+    this.renderer.setStyle(this.elements.nativeElement, 'color' , 'green');
+    this.renderer.setStyle(this.elements.nativeElement, 'font-size' , '40px');
   }
 
 

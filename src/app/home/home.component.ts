@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { AppHighlightTextColorDirective } from '../app-highlight-text-color.directive';
 import { RedHighlightTextColorDirective } from '../red-highlight-text-color.directive';
+import { AboutComponent } from "../about/about.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,AppHighlightTextColorDirective,RedHighlightTextColorDirective],
+  imports: [CommonModule, AppHighlightTextColorDirective, RedHighlightTextColorDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
